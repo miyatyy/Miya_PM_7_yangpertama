@@ -1,4 +1,4 @@
-package com.example.miya_pm_7.ui.navigation
+package com.example.miya_pm7_plus.ui.navigation
 
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -6,8 +6,8 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.miya_pm_7.ui.components.CuteBottomBar
-import com.example.miya_pm_7.ui.screens.*
+import com.example.miya_pm7_plus.ui.components.CuteBottomBar
+import com.example.miya_pm7_plus.ui.screens.*
 
 @Composable
 fun AppNavHost(

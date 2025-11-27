@@ -1,13 +1,13 @@
-package com.example.miya_pm_7
+package com.example.miya_pm7_plus
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.*
-import com.example.miya_pm_7.ui.components.CuteBottomBar
-import com.example.miya_pm_7.ui.screens.*
-import com.example.miya_pm_7.ui.theme.MiyaTheme
+import com.example.miya_pm7_plus.ui.components.CuteBottomBar
+import com.example.miya_pm7_plus.ui.screens.*
+import com.example.miya_pm7_plus.ui.theme.MiyaTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

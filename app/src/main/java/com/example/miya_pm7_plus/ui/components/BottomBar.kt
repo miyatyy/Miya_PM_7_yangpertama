@@ -1,4 +1,4 @@
-package com.example.miya_pm_7.ui.components
+package com.example.miya_pm7_plus.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*

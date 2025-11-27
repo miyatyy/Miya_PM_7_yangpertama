@@ -1,4 +1,4 @@
-package com.example.miya_pm_7.ui.theme
+package com.example.miya_pm7_plus.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Shapes

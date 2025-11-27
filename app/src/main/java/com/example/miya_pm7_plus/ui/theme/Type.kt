@@ -1,4 +1,4 @@
-package com.example.miya_pm_7.ui.theme
+package com.example.miya_pm7_plus.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
@@ -7,50 +7,45 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
 val AppTypography = Typography(
-
     // Display
     displayLarge = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.Bold,
-        fontSize = 54.sp
+        fontSize = 52.sp
     ),
     displayMedium = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.SemiBold,
-        fontSize = 42.sp
+        fontSize = 40.sp
     ),
     displaySmall = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.Medium,
-        fontSize = 34.sp
+        fontSize = 32.sp
     ),
 
     // Headline
     headlineLarge = TextStyle(
         fontWeight = FontWeight.Bold,
-        fontSize = 30.sp
+        fontSize = 28.sp
     ),
     headlineMedium = TextStyle(
         fontWeight = FontWeight.Medium,
-        fontSize = 26.sp
+        fontSize = 22.sp
     ),
     headlineSmall = TextStyle(
         fontWeight = FontWeight.Medium,
-        fontSize = 22.sp
+        fontSize = 18.sp
     ),
 
     // Title
     titleLarge = TextStyle(
         fontWeight = FontWeight.Bold,
-        fontSize = 20.sp
+        fontSize = 18.sp
     ),
     titleMedium = TextStyle(
         fontWeight = FontWeight.SemiBold,
         fontSize = 16.sp
-    ),
-    titleSmall = TextStyle(
-        fontWeight = FontWeight.Medium,
-        fontSize = 14.sp
     ),
 
     // Body
@@ -62,22 +57,14 @@ val AppTypography = Typography(
         fontWeight = FontWeight.Normal,
         fontSize = 14.sp
     ),
-    bodySmall = TextStyle(
-        fontWeight = FontWeight.Light,
-        fontSize = 12.sp
-    ),
 
     // Label
     labelLarge = TextStyle(
         fontWeight = FontWeight.SemiBold,
-        fontSize = 14.sp
-    ),
-    labelMedium = TextStyle(
-        fontWeight = FontWeight.Medium,
-        fontSize = 12.sp
+        fontSize = 13.sp
     ),
     labelSmall = TextStyle(
-        fontWeight = FontWeight.Light,
-        fontSize = 10.sp
+        fontWeight = FontWeight.Medium,
+        fontSize = 11.sp
     )
 )

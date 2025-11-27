@@ -1,4 +1,4 @@
-package com.example.miya_pm_7
+package com.example.miya_pm7_plus
 
 import org.junit.Test
 

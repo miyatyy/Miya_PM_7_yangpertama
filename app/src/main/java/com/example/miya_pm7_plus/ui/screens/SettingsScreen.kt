@@ -1,4 +1,4 @@
-package com.example.miya_pm_7.ui.screens
+package com.example.miya_pm7_plus.ui.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -7,7 +7,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
-import com.example.miya_pm_7.ui.components.AppTopBarBack
+import com.example.miya_pm7_plus.ui.components.AppTopBarBack
 
 @Composable
 fun SettingsScreen(
