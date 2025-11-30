@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MiyaPm7">
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.miya_pm_7.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
