@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base theme that points to Material3 DayNight so AndroidManifest can reference it -->
+    <style name="Theme.MiyaPm7Plus" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Use systemBars color via Material3 attributes -->
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+    </style>
+</resources>

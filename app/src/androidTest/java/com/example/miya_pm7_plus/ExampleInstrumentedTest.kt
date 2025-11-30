@@ -1,4 +1,4 @@
-package com.example.miya_pm_7
+package com.example.miya_pm7_plus
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

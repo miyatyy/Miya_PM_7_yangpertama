@@ -1,4 +1,5 @@
-package com.example.miya_pm_7.ui.screens
+package com.example.miya_pm7_plus.ui.screens
+
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -12,17 +13,18 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
-import com.example.miya_pm_7.ui.components.AppTextField
-import com.example.miya_pm_7.ui.components.PrimaryButton
+import com.example.miya_pm7_plus.ui.components.AppTextField
+import com.example.miya_pm7_plus.ui.components.PrimaryButton
 import kotlin.random.Random
 
 @Composable
 fun LoginScreen(
-    onLogin: () -> Unit = {},
+    onLoginSuccess: () -> Unit,   // ← FIX UTAMA
     fontFamily: FontFamily = FontFamily.Default
 ) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
+
     val symbols = listOf(
         "❤️","⭐","📚","💻","🎵","🎨","🍀","🌸","🍎","🐱",
         "🐶","🌞","🌙","🎁","🍰","☕","🍩","🌈","🎯","📷"
@@ -30,20 +32,30 @@ fun LoginScreen(
 
     Scaffold(topBar = {}, bottomBar = {}) { padding ->
         Box(
-            modifier = Modifier.fillMaxSize().padding(padding)
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding)
         ) {
             val screenWidth = 360f
             val screenHeight = 640f
+
             repeat(30) {
                 val symbol = symbols.random()
                 val x = Random.nextFloat() * screenWidth
                 val y = Random.nextFloat() * screenHeight
                 val size = Random.nextInt(25, 45).sp
+
                 Text(
                     text = symbol,
                     fontSize = size,
-                    color = Color(Random.nextFloat(), Random.nextFloat(), Random.nextFloat()),
-                    modifier = Modifier.offset(x.dp, y.dp).zIndex(0f)
+                    color = Color(
+                        Random.nextFloat(),
+                        Random.nextFloat(),
+                        Random.nextFloat()
+                    ),
+                    modifier = Modifier
+                        .offset(x.dp, y.dp)
+                        .zIndex(0f)
                 )
             }
 
@@ -57,15 +69,41 @@ fun LoginScreen(
                     .zIndex(1f),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text("Welcome", style = MaterialTheme.typography.displayMedium.copy(fontFamily = fontFamily))
+                Text(
+                    "Welcome",
+                    style = MaterialTheme.typography.displayMedium.copy(fontFamily = fontFamily)
+                )
                 Spacer(modifier = Modifier.height(6.dp))
-                Text("Sign in to continue", style = MaterialTheme.typography.bodyLarge.copy(fontFamily = fontFamily))
+
+                Text(
+                    "Sign in to continue",
+                    style = MaterialTheme.typography.bodyLarge.copy(fontFamily = fontFamily)
+                )
                 Spacer(modifier = Modifier.height(24.dp))
-                AppTextField(value = email, onValueChange = { email = it }, label = "Email", modifier = Modifier.fillMaxWidth())
+
+                AppTextField(
+                    value = email,
+                    onValueChange = { email = it },
+                    label = "Email",
+                    modifier = Modifier.fillMaxWidth()
+                )
+
                 Spacer(modifier = Modifier.height(12.dp))
-                AppTextField(value = password, onValueChange = { password = it }, label = "Password", modifier = Modifier.fillMaxWidth())
+
+                AppTextField(
+                    value = password,
+                    onValueChange = { password = it },
+                    label = "Password",
+                    modifier = Modifier.fillMaxWidth()
+                )
+
                 Spacer(modifier = Modifier.height(24.dp))
-                PrimaryButton(text = "Sign In", onClick = onLogin, modifier = Modifier.fillMaxWidth())
+
+                PrimaryButton(
+                    text = "Sign In",
+                    onClick = { onLoginSuccess() },   // ← PENTING
+                    modifier = Modifier.fillMaxWidth()
+                )
             }
         }
     }

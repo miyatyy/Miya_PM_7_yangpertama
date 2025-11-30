@@ -1,4 +1,4 @@
-package com.example.miya_pm_7.ui.components
+package com.example.miya_pm7_plus.ui.components
 
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -6,20 +6,15 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.ui.Modifier
+import androidx.compose.runtime.Composable
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AppTopBar(
-    title: String,
-    modifier: Modifier = Modifier
-) {
+fun AppTopBar(title: String) {
     CenterAlignedTopAppBar(
-        title = { Text(title, style = MaterialTheme.typography.titleLarge) },
-        modifier = modifier
+        title = { Text(title, style = MaterialTheme.typography.titleLarge) }
     )
 }
 
@@ -27,19 +22,14 @@ fun AppTopBar(
 @Composable
 fun AppTopBarBack(
     title: String,
-    onBack: () -> Unit,
-    modifier: Modifier = Modifier
+    onBack: () -> Unit
 ) {
     CenterAlignedTopAppBar(
         title = { Text(title, style = MaterialTheme.typography.titleLarge) },
         navigationIcon = {
             IconButton(onClick = onBack) {
-                Icon(
-                    imageVector = Icons.Filled.ArrowBack,
-                    contentDescription = "Back"
-                )
+                Icon(Icons.Default.ArrowBack, contentDescription = "Back")
             }
-        },
-        modifier = modifier
+        }
     )
 }

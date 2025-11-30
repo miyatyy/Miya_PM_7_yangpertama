@@ -1,8 +1,8 @@
-package com.example.miya_pm_7.ui.components
+package com.example.miya_pm7_plus.ui.components
 
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
@@ -16,7 +16,9 @@ fun AppTextField(
     OutlinedTextField(
         value = value,
         onValueChange = onValueChange,
+        modifier = modifier,
         label = { Text(label) },
-        modifier = modifier.fillMaxWidth()
+        colors = TextFieldDefaults.colors(),
+        singleLine = true
     )
 }

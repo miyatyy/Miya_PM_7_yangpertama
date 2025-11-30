@@ -1,4 +1,4 @@
-package com.example.miya_pm_7.ui.components
+package com.example.miya_pm7_plus.ui.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -7,7 +7,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.Dp
-import com.example.miya_pm_7.ui.theme.AppShapes
+import com.example.miya_pm7_plus.ui.theme.AppShapes
+
 
 @Composable
 fun PrimaryButton(
